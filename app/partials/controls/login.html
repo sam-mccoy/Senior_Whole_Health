@@ -8,9 +8,11 @@
                     <!--<h2 class="animated fadeIn text-center"><i class="fa fa-cloud"></i><br />{{'Order Cloud 2.0' | r}}</h2>
                     -->
 
-                    <img src="#" style="margin: auto;"/>
+                    <img src="css/images/SWH_logo.png" class="img-responsive" style="margin: auto;"/>
                     <p id="451qa_msg_login" ng-show="loginMessage" ng-bind-html="loginMessage" class="alert alert-info"></p>
                     <div>
+
+
                         <div class="view-form-icon" ng-show="!showEmailHelp && !PasswordReset && (loginMessage != 'Your password has expired and will need to be changed.')">
                             <div>
                                 <label ng-show="credentials.Username">{{'Username' | r}}</label>
@@ -23,6 +25,8 @@
                                 <i class="fa fa-lock"></i>
                             </div>
                         </div>
+
+
                         <div class="view-form-icon" ng-show="loginMessage == 'Your password has expired and will need to be changed.'">
                             <div>
                                 <label>{{'Username' | r}}</label>
@@ -47,6 +51,8 @@
                             </div>
                         </div>
 
+
+
                         <div>
                             <div class="view-form-icon" ng-show="PasswordSecurityException">
                                 <div>
@@ -67,6 +73,9 @@
                                 </div>
                             </div>
                         </div>
+
+
+
                         <div>
                             <div class="view-form-icon" ng-show="PasswordReset">
                                 <div>
@@ -82,7 +91,11 @@
                                 </div>
                             </div>
                         </div>
+
+
                         <input ng-disabled="login_form.$invalid" class="btn btn-large btn-primary btn-block" id="451_btn_login" type="submit" value="{{buttonText}}" />
+
+
 
                         <div>
                             <p class="alert alert-info" ng-show="showEmailHelp && (!EmailNotFoundException || !PasswordSecurityException)">
