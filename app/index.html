@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/custom.css" data-group="source" />
     <link href='//fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.min.css" />
     <!--[if lt IE 9]>
     <div style="position:absolute; top:0; left:0; right:0; bottom:0; background-position:center center; background-size:cover; background-repeat:no-repeat;"></div>
@@ -56,6 +57,10 @@
         <section class="search-bar hidden-print hidden-xs">
             <header class="header navbar navbar-inner">
                 <nav class="navbar navbar-default" role="navigation">
+                    
+                            <img src="css/images/Store_Banner.png" class="img-responsive center-block hidden-xs" style="width:100%;">
+
+
                     <div class="container">
                         <ul class="nav navbar-nav pull-right">
                             <li><productsearchinput></productsearchinput></li>
@@ -64,14 +69,21 @@
                 </nav>
             </header>
         </section>
+        <!--
+                <section class="hidden-print">
+                    <branding />
+                </section>
 
-        <!--<section class="hidden-print">
-            <branding />
-        </section>-->
+                        <section class="jumbotron" ng-class="{'active': isActive('catalog')}" ng-show="user.Company.LogoUrl">
+                            <customcarousel></customcarousel>
+                        </section>
+
 
         <section class="jumbotron" ng-class="{'active': isActive('catalog')}" ng-show="user.Company.LogoUrl">
-            <customcarousel></customcarousel>
+            <img src="css/images/Store_Banner.png" class="img-responsive center-block hidden-xs" style="width:100%;">
         </section>
+-->
+
 
         <section class="container-view">
             <ng-view autoscroll />
