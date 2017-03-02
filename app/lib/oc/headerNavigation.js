@@ -23,6 +23,7 @@ function headernavigation() {
             '<li><a href="cart"><i class="fa fa-shopping-cart"></i> Cart&nbsp;',
             '<span ng-if="currentOrder.LineItems.length" ng-bind="cartCount" class="badge"></span>',
             '</a></li>',
+            //'<li class="cart" ng-class="{'active': isActive(['cart', 'checkout'])}"><a id="451qa_cart_link" ng-show="(cartCount && cartCount > 0) && user.CurrentOrderID" class="cart" href="cart"><span ng-bind="cartCount" class="badge"></span><i class="fa fa-shopping-cart"></i> Cart&nbsp;</a></li>',
             '<li><a ng-click="Logout()"><i class="fa fa-sign-out"></i> Log Out</a></li>',
             '</ul>',
             '</div>',

@@ -1,4 +1,6 @@
 <section class="order-search-view">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-collapse">
     <div class="panel panel-default" ng-if="!hasStandardTypes && !hasReplenishmentTypes && !hasPriceRequestTypes">
         <div class="panel-heading">
             <h3 class="panel-title">{{'Orders' | r | xlat}}</h3>
@@ -54,7 +56,7 @@
         </div>
         <div class="panel-body">
             <div class="form-inline">
-                <div class="col-sm-7 col-lg-9">
+                <div class="col-sm-12"> <!--<div class="col-sm-7 col-lg-9">-->
                     <div class="view-form-icon">
                         <div class="form-group">
                             <label ng-show="criteria.OrderID">{{'Order ID' | r | xlat}}</label>
@@ -99,6 +101,10 @@
                         </div>
                     </div>
                 </div>
+
+                <!--
+
+
                 <div class="col-sm-5 col-lg-3">
                     <div class="alert alert-info">
                         <i class="fa fa-info-circle"></i>
@@ -112,6 +118,7 @@
                         </div>
                     </div>
                 </div>
+                -->
             </div>
         </div>
         <div class="panel-footer">
@@ -184,5 +191,8 @@
                             items-per-page="settings.pageSize" direction-links="true"></pagination>
             </div>
         </div>
+
+    </div>
+    </div>
     </div>
 </section>

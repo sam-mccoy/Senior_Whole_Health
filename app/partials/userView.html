@@ -1,4 +1,6 @@
 <section class="user-view">
+
+
     <div class="hidden-md hidden-lg" ng-class="{'panel panel-default':!user.Permissions.contains('ViewSelfAdmin')}">
         <div class="panel-heading" ng-show="!user.Permissions.contains('ViewSelfAdmin')">
             <h3 class="panel-title">{{'My Account' | r | xlat}}</h3>
@@ -7,8 +9,14 @@
             <accountnavigation />
         </div>
     </div>
+
+
     <loadingindicator title="{{'Please wait while we save your changes' | r | xlat}}" ng-show="displayLoadingIndicator"/>
     <identifyusermessage ng-show="user.Type == 'TempCustomer'" />
+
+
+
+
     <form ng-show="user.Permissions.contains('ViewSelfAdmin')" name="login_existing" ng-submit="loginExisting()" ng-if="user.Type == 'TempCustomer'">
         <div class="panel panel-default" id="user_form">
             <div class="panel-heading">
@@ -173,4 +181,46 @@
             </div>
         </div>
     </form>
+
+
+    <div class="panel panel-default">
+
+     <div class="panel-heading">
+        <h3 class="panel-title">{{'My Addresses' | r | xlat}}</h3>
+     </div>
+
+        <div style="padding: 20px;">
+            <ul>
+
+                <li id="451qa_addy_link" ng-show="user.Type == 'Customer' && (user.Permissions.contains('CreateShipToAddress') || user.Permissions.contains('CreateBillToAddress'))" class="addresses">
+                    <a href="addresses">
+                        {{'My Addresses' | r | xlat}}
+                    </a>
+                </li>
+                </ul>
+        </div>
+        </div>
+
+
+
+    <div class="panel panel-default">
+
+        <div class="panel-heading">
+            <h3 class="panel-title">{{'Favorite Orders' | r | xlat}}</h3>
+        </div>
+
+        <div style="padding: 20px;">
+          <ul>
+
+            <li class="favorites" ng-show="user.Type == 'Customer'">
+                <a id="451qa_fave_link" href="favoriteorders">
+                    {{'Favorite Orders' | r | xlat}}
+                </a>
+            </li>
+          </ul>
+        </div>
+        </div>
+
+
+
 </section>

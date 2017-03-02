@@ -25,10 +25,10 @@ function ($scope, $routeParams, $location, $451, Order, OrderConfig, User) {
 	$scope.continueShopping = function() {
 		if (!$scope.cart.$invalid) {
 			if (confirm('Do you want to save changes to your order before continuing?') == true)
-				$scope.saveChanges(function() { $location.path('catalog') });
+				$scope.saveChanges(function() { $location.path('catalog/availableproducts') });   //changed the location.path to catalog/availableproducts
 		}
 		else
-			$location.path('catalog');
+			$location.path('catalog/availableproducts');    //changed the location.path to catalog/availableproducts
 	};
 
 	$scope.cancelOrder = function() {
@@ -40,7 +40,8 @@ function ($scope, $routeParams, $location, $451, Order, OrderConfig, User) {
 					$scope.currentOrder = null;
 					$scope.user.CurrentOrderID = null;
 					User.save($scope.user, function(){
-						$location.path('catalog');
+						$location.path('catalog/availableproducts');  //changed the location.path to catalog/availableproducts
+						//$location.path('catalog');
 					});
 					$scope.displayLoadingIndicator = false;
 					$scope.actionMessage = 'Your Changes Have Been Saved';
@@ -86,7 +87,7 @@ function ($scope, $routeParams, $location, $451, Order, OrderConfig, User) {
 					if (!order) {
 						$scope.user.CurrentOrderID = null;
 						User.save($scope.user, function(){
-							$location.path('catalog');
+							$location.path('catalog/availableproducts');  //changed the location.path to catalog/availableproducts
 						});
 					}
 					$scope.displayLoadingIndicator = false;

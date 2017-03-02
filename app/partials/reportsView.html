@@ -1,4 +1,6 @@
 <section>
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-collapse">
     <loadingindicator ng-show="displayLoadingIndicator" />
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -50,5 +52,5 @@
         <div class="panel-footer">
             <button type="button" class="btn btn-danger" ng-click="deleteSelected($event)" ng-disabled="(Reports | filter:searchTerm | filter:{Selected:true}).length == 0">{{('Delete' | r) + ' ' +  ('Selected' | r) | xlat}}</button>
         </div>
-    </div>
+    </div></div></div>
 </section>

@@ -23,6 +23,10 @@ Authors: Coverdale Group
     font-weight: bold;
 }
 
+.panel {
+
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
 
 /******************/
 
@@ -194,9 +198,16 @@ body a {
     background-color: #ffffff;
 }
 
+.thumbnail {
+
+    min-height: 195px;
+}
+
 .thumbnail img {
 
     max-height: 150px;
+    max-width: 100%;
+    margin: 0 auto 15px;
 }
 
 .gray-background {
@@ -229,11 +240,11 @@ body a {
 
 }
 
-h1, h2, h3, .h1, .h2, .h3 {
+h1, h2, .h1, .h2, .h3 {
     font-family: 'PT Sans Narrow', sans-serif;
 }
 
-h4, h5, h6, .h4, .h5, .h6 {
+h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
     font-family: 'Open Sans', sans-serif;
 
 
@@ -279,6 +290,13 @@ input, button, select, textarea {
 }
 .navbar-nav li.dropdown li > a {
     color: #043b55;
+}
+
+.navbar-default {
+    background-color: #fff;
+    border-color:#fff;
+
+
 }
 
 .levelTwoNav {
@@ -352,3 +370,53 @@ input, button, select, textarea {
     position: relative;
     margin-bottom: 15px;
 }
+
+.panel-default, .panel-search, .panel-category-list ul li a .empty, .panel-order, .panel-primary {
+    border-color: #fff;
+}
+
+.panel-primary .panel-heading .panel-title {
+    background-color: #B6C0A6;
+}
+
+.btn-danger {
+
+    background-color: #9c9c9c;
+    border-color: #9c9c9c;
+}
+
+.panel-lineitem .col-sm-9 input {
+    font-size: 10px;
+}
+
+.btn-primary  {background-color: #99c1b3;}
+.btn-primary, .btn-primary:hover  {color: #000000;}
+.btn-primary  {border-color: #99c1b3;}
+.btn-primary:hover  {background-color: #99c1b3;}
+
+.btn-default  {background-color: #FFFFFF;}
+.btn-default, .btn-default:hover  {color: #333333;}
+.btn-default  {border-color: #CCCCCC;}
+.btn-default:hover  {background-color: #EBEBEB;}
+
+.btn-info  {background-color: #b7c1a6;}
+.btn-info, .btn-info:hover  {color: #000000;}
+.btn-info  {border-color: #b7c1a6;}
+.btn-info:hover  {background-color: #b7c1a6;}
+
+.btn-success  {background-color: #006341;}
+.btn-success, .btn-success:hover  {color: #FFFFFF;}
+.btn-success  {border-color: #006341;}
+.btn-success:hover  {background-color: #006341;}
+
+.btn-warning  {background-color: #f0ad4e;}
+.btn-warning, .btn-warning:hover  {color: #FFFFFF;}
+.btn-warning  {border-color: #EEA236;}
+.btn-warning:hover  {background-color: #ED9C28;}
+
+.btn-danger  {background-color: #4c917a;}
+.btn-danger, .btn-danger:hover  {color: #FFFFFF;}
+.btn-danger  {border-color: #4c917a;}
+.btn-danger:hover  {background-color: #4c917a;}
+
+.order-cloud .form-signin {background-color: #f0f0f0;}
