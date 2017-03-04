@@ -4,23 +4,12 @@
 
 
     <div class="col-sm-6">
-
-        <h3 class="text-primary">
-            {{item.ProductIDText}}
-        </h3>
-
-
-        <!--
-        <div class="panel-lineitem" ng-repeat="item in currentOrder.LineItems">
-             <div class="col-xs-6 col-sm-12 col-md-6 thumbnail" ng-show="item.Variant.LargeImageUrl || item.Product.SmallImageUrl">
-                 <figure>
-                      <img ng-src="{{item.Variant.LargeImageUrl || item.Product.SmallImageUrl}}" />
-                  </figure>
-
-             </div>
-        </div>
-        -->
-
+    	<div ng-if="item.Product.SmallImageUrl || item.Product.LargeImageUrl">
+    		<img ng-src="{{thumbnailSRCFix(item.Product.SmallImageUrl,item.Product.LargeImageUrl)}}" class="{{thumbnailSRCFixClass(item.Product.SmallImageUrl)}}" />
+    	</div>
+			<h3 ng-if="!(item.Product.SmallImageUrl || item.Product.LargeImageUrl)" class="text-primary">
+					{{item.ProductIDText}}
+			</h3>
 
         <span>{{item.Product.Name}}</span>
         <ul ng-show="item.Specs | filter:{'CanSetForLineItem':true}.length > 0">
