@@ -118,4 +118,24 @@ four51.app.controller('OrderViewCtrl', ['$scope', '$location', '$routeParams', '
                 }
             });
         };
-	}]);
+
+
+   $scope.thumbnailSRCFix = function(smallURL,largeURL){
+
+   	 if(smallURL){
+
+   	 	 var r = "/product/", i = smallURL.toLowerCase().indexOf(r);
+   	 	 if(i >= 0) return smallURL.substr(0,i) + "/ProductThumbnail/" + smallURL.substr(i + r.length);
+   	 	 else return smallURL;
+
+   	 }
+
+		 return largeURL;
+
+	 };
+
+	 $scope.thumbnailSRCFixClass = function(smallURL){ return smallURL ? "" : "img-responsive"; };
+
+
+
+}]);
